@@ -1,3 +1,4 @@
+--gerando uma alteraçao qualquer
 WITH new_id AS
   (SELECT *,
           first_value(customer_id) OVER (PARTITION BY company_name, contact_name) AS RESULT
